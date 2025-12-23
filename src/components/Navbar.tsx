@@ -2,23 +2,30 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-
-const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Books", path: "/books" },
-  { name: "Speaking", path: "/speaking" },
-  { name: "Blogs", path: "/blogs" },
-  { name: "Resources", path: "/resources" },
-];
-
+const navLinks = [{
+  name: "Home",
+  path: "/"
+}, {
+  name: "About",
+  path: "/about"
+}, {
+  name: "Books",
+  path: "/books"
+}, {
+  name: "Speaking",
+  path: "/speaking"
+}, {
+  name: "Blogs",
+  path: "/blogs"
+}, {
+  name: "Resources",
+  path: "/resources"
+}];
 const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 shadow-xl">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-1">
@@ -32,19 +39,9 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-sm font-medium transition-colors underline-animation ${
-                  location.pathname === link.path
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
+            {navLinks.map(link => <Link key={link.path} to={link.path} className={`text-sm font-medium transition-colors underline-animation ${location.pathname === link.path ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}>
                 {link.name}
-              </Link>
-            ))}
+              </Link>)}
           </div>
 
           {/* CTA Button */}
@@ -55,42 +52,23 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
+          <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-up">
+        {isOpen && <div className="md:hidden py-4 border-t border-border animate-fade-up">
             <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`text-base font-medium transition-colors ${
-                    location.pathname === link.path
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
+              {navLinks.map(link => <Link key={link.path} to={link.path} onClick={() => setIsOpen(false)} className={`text-base font-medium transition-colors ${location.pathname === link.path ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}>
                   {link.name}
-                </Link>
-              ))}
+                </Link>)}
               <Button variant="hero" className="mt-2 w-full">
                 Book Consultation
               </Button>
             </div>
-          </div>
-        )}
+          </div>}
       </nav>
-    </header>
-  );
+    </header>;
 };
-
 export default Navbar;
