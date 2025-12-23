@@ -202,29 +202,39 @@ const Index = () => {
       </section>
 
       {/* Life in a Nutshell */}
-      <section className="section-padding bg-background">
-        <div className="container mx-auto">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-12">
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4 mb-8">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-center">
             My life in a Nutshell...
           </h2>
+        </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-1 overflow-hidden rounded-lg">
+        {/* Title Bar */}
+        <div className="bg-[hsl(30,30%,55%)] py-4">
+          <div className="grid grid-cols-6 max-w-full">
             {lifeRoles.map((role, index) => (
-              <div key={index} className="relative group aspect-[4/5] overflow-hidden">
-                <img
-                  src={role.image}
-                  alt={role.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="text-primary-foreground font-heading text-sm md:text-base font-medium">
-                    {role.title}
-                  </p>
-                </div>
+              <div key={index} className="text-center">
+                <p className="font-heading text-sm md:text-xl lg:text-2xl text-white font-medium">
+                  {role.title}
+                </p>
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Images Strip */}
+        <div className="grid grid-cols-6 w-full">
+          {lifeRoles.map((role, index) => (
+            <div key={index} className="relative group aspect-[3/4] overflow-hidden">
+              <img
+                src={role.image}
+                alt={role.title}
+                className={`w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-105 ${
+                  index !== 3 ? "grayscale group-hover:grayscale-0" : ""
+                }`}
+              />
+            </div>
+          ))}
         </div>
       </section>
 
