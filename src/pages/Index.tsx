@@ -91,7 +91,7 @@ const Index = () => {
           <img src={iconGavel} alt="" className="absolute right-12 md:right-24 lg:right-32 top-4 md:top-6 w-16 md:w-24 lg:w-28 opacity-80 pointer-events-none" />
           <img src={iconMicrophone} alt="" className="absolute right-0 bottom-0 w-24 md:w-32 lg:w-40 opacity-80 pointer-events-none" />
 
-          <div className="text-center relative z-10 pt-20 md:pt-24 pb-6 px-0">
+          <div className="text-center relative z-10 pt-20 md:pt-24 pb-6 px-0 py-[6px]">
             <p className="text-base md:text-lg tracking-wide mb-3 opacity-90">Hi, I'm</p>
             <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold">
               Dionne<br />Tweneboah
