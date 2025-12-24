@@ -5,7 +5,7 @@ import dionneAboutImage from "@/assets/dionne-about.jpg";
 import iconScale from "@/assets/icon-scale.png";
 import iconGavel from "@/assets/icon-gavel.png";
 import iconMicrophone from "@/assets/icon-microphone.png";
-import bookTyranny from "@/assets/book-tyranny.jpg";
+import bookTyranny from "@/assets/book-tyranny.png";
 import speakingHeroImage from "@/assets/speaking-hero.png";
 import roleLawyerImage from "@/assets/role-lawyer.jpg";
 import roleSpeakerImage from "@/assets/role-speaker.jpg";
