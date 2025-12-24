@@ -4,26 +4,53 @@ import { Button } from "@/components/ui/button";
 import speakerHero from "@/assets/speaker-hero.jpg";
 import dionneAbout from "@/assets/dionne-portrait.jpg";
 import { CheckCircle, Asterisk } from "lucide-react";
-const audienceOutcomes = ["Renewed clarity on their identity and calling", "Confidence to make bold moves and live with intention", "Tools to overcome fear, self-doubt, and procrastination", "A deeper connection to purpose, both personal and professional"];
-const audienceTypes = ["People who feel called to more, but don't know where to start", "Burnt-out dreamers ready to reclaim their fire.", "High-achieving women silently struggling with self-doubt.", "Faith-driven women seeking alignment between calling and career.", "Leaders craving deeper purpose behind their success.", "Creatives navigating fear of visibility.", "Visionaries stuck in cycles of perfectionism or procrastination.", "Professionals who \"have it all\" but still feel unfulfilled."];
-const bookingSteps = [{
-  title: "Connect & Confirm",
-  description: "We start by syncing schedules and learning about your event's heartbeat and goals."
-}, {
-  title: "Tailor the Message",
-  description: "We'll align the message with your audience's needs, whether it's growth, resilience, leadership, or unlocking purpose."
-}, {
-  title: "Deliver Transformation",
-  description: "We'll align the message with your audience's needs, whether it's growth, resilience, leadership, or unlocking purpose."
-}];
+
+const audienceOutcomes = [
+  "Renewed clarity on their identity and calling",
+  "Confidence to make bold moves and live with intention",
+  "Tools to overcome fear, self-doubt, and procrastination",
+  "A deeper connection to purpose, both personal and professional",
+];
+
+const audienceTypes = [
+  "People who feel called to more, but don't know where to start",
+  "Burnt-out dreamers ready to reclaim their fire.",
+  "High-achieving women silently struggling with self-doubt.",
+  "Faith-driven women seeking alignment between calling and career.",
+  "Leaders craving deeper purpose behind their success.",
+  "Creatives navigating fear of visibility.",
+  "Visionaries stuck in cycles of perfectionism or procrastination.",
+  "Professionals who \"have it all\" but still feel unfulfilled.",
+];
+
+const bookingSteps = [
+  {
+    title: "Connect & Confirm",
+    description: "We start by syncing schedules and learning about your event's heartbeat and goals."
+  },
+  {
+    title: "Tailor the Message",
+    description: "We'll align the message with your audience's needs, whether it's growth, resilience, leadership, or unlocking purpose."
+  },
+  {
+    title: "Deliver Transformation",
+    description: "We'll align the message with your audience's needs, whether it's growth, resilience, leadership, or unlocking purpose."
+  }
+];
+
 const Speaking = () => {
-  return <div className="min-h-screen bg-background">
+  return (
+    <div className="min-h-screen bg-background">
       <Navbar />
 
       {/* Hero Section */}
       <section className="pt-20 md:pt-24 relative">
         <div className="relative h-[70vh] md:h-[80vh] overflow-hidden">
-          <img alt="Dionne Speaking" className="w-full h-full object-cover object-top" src="/lovable-uploads/20851ced-4e49-4104-8e99-36c9be09098e.jpg" />
+          <img
+            src={speakerHero}
+            alt="Dionne Speaking"
+            className="w-full h-full object-cover object-top"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/60 to-primary/30"></div>
           <div className="absolute inset-0 flex items-end justify-center text-center text-primary-foreground pb-16 md:pb-24">
             <div className="max-w-4xl px-4">
@@ -58,7 +85,11 @@ const Speaking = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-6xl mx-auto">
             <div className="relative">
-              <img src={dionneAbout} alt="Dionne" className="w-full max-w-md mx-auto rounded-lg" />
+              <img
+                src={dionneAbout}
+                alt="Dionne"
+                className="w-full max-w-md mx-auto rounded-lg"
+              />
             </div>
 
             <div className="space-y-6">
@@ -96,18 +127,23 @@ const Speaking = () => {
               </h2>
               
               <div className="space-y-8">
-                {bookingSteps.map((step, index) => <div key={index}>
+                {bookingSteps.map((step, index) => (
+                  <div key={index}>
                     <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
                       {index + 1}. {step.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
                       {step.description}
                     </p>
-                  </div>)}
+                  </div>
+                ))}
               </div>
 
               <div className="flex flex-wrap gap-4 mt-10">
-                <Button variant="outline" className="rounded-full px-6 border-gold text-gold hover:bg-gold hover:text-foreground">
+                <Button 
+                  variant="outline" 
+                  className="rounded-full px-6 border-gold text-gold hover:bg-gold hover:text-foreground"
+                >
                   Download Dionne's Media Kit
                 </Button>
                 <Button variant="hero" className="rounded-full px-6">
@@ -117,7 +153,11 @@ const Speaking = () => {
             </div>
 
             <div className="flex justify-center items-start">
-              <img src={dionneAbout} alt="Dionne" className="w-full max-w-sm rounded-lg" />
+              <img
+                src={dionneAbout}
+                alt="Dionne"
+                className="w-full max-w-sm rounded-lg"
+              />
             </div>
           </div>
         </div>
@@ -145,12 +185,17 @@ const Speaking = () => {
           </h3>
 
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
-            {audienceOutcomes.map((outcome, index) => <div key={index} className="flex items-start gap-4 text-left">
+            {audienceOutcomes.map((outcome, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-4 text-left"
+              >
                 <div className="w-10 h-10 border-2 border-primary-foreground/50 rounded-full flex items-center justify-center flex-shrink-0">
                   <CheckCircle className="w-5 h-5 opacity-80" />
                 </div>
                 <p className="text-base md:text-lg pt-1.5">{outcome}</p>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -166,12 +211,17 @@ const Speaking = () => {
           </p>
 
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl mx-auto">
-            {audienceTypes.map((type, index) => <div key={index} className="flex items-start gap-4 text-left">
+            {audienceTypes.map((type, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-4 text-left"
+              >
                 <div className="w-10 h-10 bg-muted rounded-full flex items-center justify-center flex-shrink-0">
                   <Asterisk className="w-5 h-5 text-foreground" />
                 </div>
                 <p className="text-foreground font-medium pt-2">{type}</p>
-              </div>)}
+              </div>
+            ))}
           </div>
 
           <Button variant="hero" size="lg" className="rounded-full px-10 mt-16">
@@ -187,8 +237,19 @@ const Speaking = () => {
             Ready to Transform Lives At Your Next{" "}
             <span className="relative inline-block">
               Event?
-              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 15 Q100 -5, 195 15" stroke="hsl(var(--primary))" strokeWidth="3" strokeLinecap="round" fill="none" />
+              <svg 
+                className="absolute -bottom-2 left-0 w-full" 
+                viewBox="0 0 200 20" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path 
+                  d="M5 15 Q100 -5, 195 15" 
+                  stroke="hsl(var(--primary))" 
+                  strokeWidth="3" 
+                  strokeLinecap="round"
+                  fill="none"
+                />
               </svg>
             </span>
           </h2>
@@ -202,6 +263,8 @@ const Speaking = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Speaking;
