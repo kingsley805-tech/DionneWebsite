@@ -5,7 +5,7 @@ import dionneAbout from "@/assets/dionne-about.jpg";
 import iconScale from "@/assets/icon-scale.png";
 import iconGavel from "@/assets/icon-gavel.png";
 import iconMicrophone from "@/assets/icon-microphone.png";
-import bookTyranny from "@/assets/book-tyranny.jpg";
+import bookTyranny from "@/assets/book-tyranny.png";
 import speakingHero from "@/assets/speaking-hero.jpg";
 import roleLawyer from "@/assets/role-lawyer.jpg";
 import roleSpeaker from "@/assets/role-speaker.jpg";
@@ -182,49 +182,51 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Ordinary Life Section */}
-      <section className="section-padding bg-background">
-        <div className="container mx-auto text-center">
-          <h2 className="font-heading text-3xl md:text-5xl font-bold text-primary mb-6">
-            You Were Never Meant for an<br />Ordinary Life.
-          </h2>
-          <p className="max-w-2xl mx-auto text-muted-foreground text-lg">
-            Break free from the limits you've learned to live with and step boldly into the
-            extraordinary future God designed for you.
-          </p>
-        </div>
-      </section>
-
       {/* Book Section */}
       <section className="section-padding bg-background">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Book Info */}
-            <div className="space-y-6">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold">
-                The Tyranny of The Ordinary
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                The Tyranny of Ordinary is a bold call to break free from mediocrity. It challenges readers to rise above fear, embrace purpose, and live courageously beyond the ordinary.
+          {/* Top Title */}
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-gold italic mb-6">
+              You Were Never Meant for an<br />Ordinary Life.
+            </h2>
+            <p className="max-w-2xl mx-auto text-muted-foreground">
+              Break free from the limits you've learned to live with and step boldly into the
+              extraordinary future God designed for you.
+            </p>
+          </div>
+
+          {/* Book Content */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            {/* Book Info - Left */}
+            <div className="space-y-4">
+              <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
+                The Tyranny of The<br />Ordinary
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                The Tyranny of Ordinary is a bold call to break free from mediocrity. It challenges readers to rise above fear, embrace purpose, and live courageously beyond the ordinary
               </p>
-              <Button variant="hero">Get Your Copy</Button>
+              <Button variant="hero" className="mt-4">Get Your Copy</Button>
             </div>
 
-            {/* Book Image */}
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-gold/20 rounded-lg blur-2xl"></div>
-                <img
-                  src={bookTyranny}
-                  alt="The Tyranny of The Ordinary Book"
-                  className="relative w-64 md:w-80 rounded-lg shadow-2xl hover-lift"
-                />
-              </div>
+            {/* Book Image - Right */}
+            <div className="flex justify-center lg:justify-end">
+              <img
+                src={bookTyranny}
+                alt="The Tyranny of The Ordinary Book"
+                className="w-56 md:w-72 lg:w-80 drop-shadow-2xl"
+              />
             </div>
           </div>
 
-          <div className="mt-8 text-center">
-            <Button variant="outline">Discover more books</Button>
+          {/* Discover More Button */}
+          <div className="mt-12 text-center">
+            <Button 
+              variant="outline" 
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full px-8"
+            >
+              Discover more books
+            </Button>
           </div>
         </div>
       </section>
