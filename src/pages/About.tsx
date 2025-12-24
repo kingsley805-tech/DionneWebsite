@@ -55,7 +55,7 @@ const About = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <div className="flex justify-center lg:justify-start">
-              <img src={aboutStory} alt="Dionne's Journey" className="w-full max-w-sm rounded-lg shadow-xl" />
+              <img alt="Dionne's Journey" className="w-full max-w-sm rounded-lg shadow-xl" src="/lovable-uploads/9ec8a693-f6be-4b8e-8cc2-8c1ec68f1208.jpg" />
             </div>
 
             <div className="space-y-6 text-cream">
