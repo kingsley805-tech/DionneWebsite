@@ -107,7 +107,7 @@ const Index = () => {
 
         {/* Name Banner - overlaps the hero image */}
         <div className="bg-primary text-primary-foreground py-8 relative overflow-hidden -mt-24 md:-mt-32 md:py-0">
-          <div className="text-center relative z-10 pt-12 md:pt-16 pb-4 px-0">
+          <div className="text-center relative z-10 pt-4 md:pt-6 pb-4 px-0">
             <p className="text-sm md:text-lg tracking-wide mb-2 opacity-90">Hi, I'm</p>
             <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold">
               Dionne<br />Tweneboah
@@ -117,12 +117,12 @@ const Index = () => {
           {/* Decorative icons - positioned below text */}
           <img src={iconScale} alt="" className="absolute left-0 bottom-0 w-20 md:w-32 lg:w-40 opacity-80 pointer-events-none" />
           <img src={iconGavel} alt="" className="absolute right-0 top-1/2 -translate-y-1/2 w-16 md:w-24 lg:w-28 opacity-80 pointer-events-none" />
-          <img src={iconMicrophone} alt="" className="absolute right-0 bottom-0 w-10 md:w-14 lg:w-16 opacity-80 pointer-events-none" />
+          <img src={iconMicrophone} alt="" className="absolute right-0 bottom-0 w-14 md:w-20 lg:w-16 opacity-80 pointer-events-none" />
         </div>
       </section>
 
       {/* White gap between Hero and Mission */}
-      <div className="h-16 md:h-24 my-0 mx-0 px-0 py-0 bg-muted"></div>
+      <div className="h-16 md:h-10 my-0 mx-0 px-0 py-0 bg-muted"></div>
 
       {/* Mission Section */}
       <section className="text-primary-foreground section-padding bg-[#992430]">
@@ -292,6 +292,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <div className="h-16 md:h-10 my-0 mx-0 px-0 py-0 bg-muted"></div>
 
       {/* Newsletter */}
       <Newsletter />
