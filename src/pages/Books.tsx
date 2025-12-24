@@ -7,60 +7,30 @@ import { useState } from "react";
 import bookTyranny from "@/assets/book-tyranny.jpg";
 import dionneMessage from "@/assets/dionne-portrait.jpg";
 import dionneAbout from "@/assets/dionne-portrait.jpg";
-
-const tyrannyFeatures = [
-  "Constantly questions your worth, despite being accomplished on paper.",
-  "Feels like you are living on autopilot but doesn't know how to break free.",
-  "Has dreams your buried because they felt \"too much\" or \"too late.\"",
-  "Is the strong one for everyone else- but silently struggling with burnout and self-doubt.",
-  "Is multi-passionate but overwhelmed by the pressure to \"choose one thing.\"",
-  "Has a voice, message, or gift inside of her, but fear of visibility keeps you hidden.",
-  "Loves God and desires to honor Him, but doesn't know how purpose fits into your everyday life.",
-  "Is tired of settling for survival when you were created for significance.",
-];
-
-const conqueringFeatures = [
-  "You've overcome a lot, but still feel like you're not \"enough.\"",
-  "You constantly battle with imposter syndrome or fear of failure.",
-  "You're exhausted from performing for acceptance instead of living authentically.",
-  "You know you're called to lead, but self-doubt keeps paralyzing your progress.",
-  "You feel stuck between who you've been and who you're becoming.",
-  "You want to heal from the wounds of rejection, comparison, or betrayal.",
-  "You're tired of playing it safe and are ready to play by Heaven's rules.",
-  "You're ready to fight back - with strategy, not just strength.",
-];
-
-const testimonials = [
-  {
-    image: "/placeholder.svg",
-    quote: "The book follows the narrative of an immigrant's plight and struggles, using universal human language that anyone can benefit from. Tweneboah's piercing clarity and poetic insight expose the lie of ordinary lives and offer a bold roadmap to rebel against cultural conformity.",
-    name: "Mikey B"
-  },
-  {
-    image: "/placeholder.svg",
-    quote: "This book changed my perspective on what it means to live with purpose. Every chapter felt like a personal conversation with someone who truly understands the struggle of wanting more.",
-    name: "Sarah M"
-  },
-  {
-    image: "/placeholder.svg",
-    quote: "Dionne's words are both a mirror and a map. She shows you where you've been hiding and guides you toward where you're meant to be.",
-    name: "Jennifer K"
-  }
-];
-
+const tyrannyFeatures = ["Constantly questions your worth, despite being accomplished on paper.", "Feels like you are living on autopilot but doesn't know how to break free.", "Has dreams your buried because they felt \"too much\" or \"too late.\"", "Is the strong one for everyone else- but silently struggling with burnout and self-doubt.", "Is multi-passionate but overwhelmed by the pressure to \"choose one thing.\"", "Has a voice, message, or gift inside of her, but fear of visibility keeps you hidden.", "Loves God and desires to honor Him, but doesn't know how purpose fits into your everyday life.", "Is tired of settling for survival when you were created for significance."];
+const conqueringFeatures = ["You've overcome a lot, but still feel like you're not \"enough.\"", "You constantly battle with imposter syndrome or fear of failure.", "You're exhausted from performing for acceptance instead of living authentically.", "You know you're called to lead, but self-doubt keeps paralyzing your progress.", "You feel stuck between who you've been and who you're becoming.", "You want to heal from the wounds of rejection, comparison, or betrayal.", "You're tired of playing it safe and are ready to play by Heaven's rules.", "You're ready to fight back - with strategy, not just strength."];
+const testimonials = [{
+  image: "/placeholder.svg",
+  quote: "The book follows the narrative of an immigrant's plight and struggles, using universal human language that anyone can benefit from. Tweneboah's piercing clarity and poetic insight expose the lie of ordinary lives and offer a bold roadmap to rebel against cultural conformity.",
+  name: "Mikey B"
+}, {
+  image: "/placeholder.svg",
+  quote: "This book changed my perspective on what it means to live with purpose. Every chapter felt like a personal conversation with someone who truly understands the struggle of wanting more.",
+  name: "Sarah M"
+}, {
+  image: "/placeholder.svg",
+  quote: "Dionne's words are both a mirror and a map. She shows you where you've been hiding and guides you toward where you're meant to be.",
+  name: "Jennifer K"
+}];
 const Books = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
   };
-
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentTestimonial(prev => (prev - 1 + testimonials.length) % testimonials.length);
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navbar />
 
       {/* Hero Section - Burgundy */}
@@ -80,7 +50,7 @@ const Books = () => {
                   Break free from average. Step into your extraordinary.
                 </p>
                 <svg className="w-48 h-4 mt-2" viewBox="0 0 200 10">
-                  <path d="M0,5 Q50,0 100,5 T200,5" stroke="white" strokeWidth="2" fill="none" opacity="0.6"/>
+                  <path d="M0,5 Q50,0 100,5 T200,5" stroke="white" strokeWidth="2" fill="none" opacity="0.6" />
                 </svg>
               </div>
               
@@ -99,11 +69,7 @@ const Books = () => {
 
             <div className="flex justify-center lg:justify-end">
               <div className="bg-[hsl(0,0%,90%)] p-8 rounded-lg shadow-2xl">
-                <img
-                  src={bookTyranny}
-                  alt="The Tyranny of the Ordinary"
-                  className="w-64 md:w-80 rounded shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-300"
-                />
+                <img src={bookTyranny} alt="The Tyranny of the Ordinary" className="w-64 md:w-80 rounded shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-300" />
               </div>
             </div>
           </div>
@@ -117,14 +83,20 @@ const Books = () => {
             <Button className="bg-[hsl(45,100%,50%)] hover:bg-[hsl(45,100%,45%)] text-black font-medium px-6 py-2 rounded-full">
               Order Today
             </Button>
-            <span className="text-2xl md:text-3xl font-bold text-[hsl(30,100%,25%)]" style={{ fontFamily: 'Arial, sans-serif' }}>
+            <span className="text-2xl md:text-3xl font-bold text-[hsl(30,100%,25%)]" style={{
+            fontFamily: 'Arial, sans-serif'
+          }}>
               amazon
             </span>
             <div className="flex flex-col items-center">
-              <span className="text-lg md:text-xl font-bold text-[hsl(30,100%,25%)]" style={{ fontFamily: 'Arial, sans-serif' }}>amazon</span>
+              <span className="text-lg md:text-xl font-bold text-[hsl(30,100%,25%)]" style={{
+              fontFamily: 'Arial, sans-serif'
+            }}>amazon</span>
               <span className="text-[hsl(45,100%,40%)] font-medium text-sm">kindle</span>
             </div>
-            <span className="text-lg md:text-xl font-bold" style={{ fontFamily: 'Georgia, serif' }}>
+            <span className="text-lg md:text-xl font-bold" style={{
+            fontFamily: 'Georgia, serif'
+          }}>
               <span className="text-[hsl(180,100%,20%)]">BARNES</span>
               <span className="text-[hsl(30,80%,45%)]">&</span>
               <span className="text-[hsl(180,100%,20%)]">NOBLE</span>
@@ -138,11 +110,7 @@ const Books = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 items-start max-w-6xl mx-auto">
             <div className="flex justify-center lg:justify-start">
-              <img
-                src={dionneMessage}
-                alt="Dionne Tweneboah"
-                className="w-72 md:w-96 object-cover"
-              />
+              <img alt="Dionne Tweneboah" className="w-72 md:w-96 object-cover" src="/lovable-uploads/b8d601bf-d293-430c-8367-f350ff47b5a5.jpg" />
             </div>
             
             <div className="space-y-6">
@@ -187,7 +155,9 @@ const Books = () => {
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-2">
               Who This Book Is For
             </h2>
-            <p className="font-heading text-2xl md:text-3xl italic text-muted-foreground" style={{ fontFamily: 'cursive' }}>
+            <p className="font-heading text-2xl md:text-3xl italic text-muted-foreground" style={{
+            fontFamily: 'cursive'
+          }}>
               (If You're Wondering...)
             </p>
           </div>
@@ -198,12 +168,10 @@ const Books = () => {
             </h3>
             
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
-              {tyrannyFeatures.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
+              {tyrannyFeatures.map((feature, index) => <div key={index} className="flex items-start gap-3">
                   <span className="font-bold text-foreground">{index + 1}.</span>
                   <p className="text-muted-foreground">{feature}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <p className="text-center mt-12 text-primary font-semibold text-lg">
@@ -218,27 +186,15 @@ const Books = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-8 mb-8">
-              <button 
-                onClick={prevTestimonial}
-                className="p-2 hover:bg-muted rounded-full transition-colors"
-                aria-label="Previous testimonial"
-              >
+              <button onClick={prevTestimonial} className="p-2 hover:bg-muted rounded-full transition-colors" aria-label="Previous testimonial">
                 <ChevronLeft className="w-6 h-6 text-muted-foreground" />
               </button>
               
               <div className="w-32 h-32 rounded-full overflow-hidden bg-muted">
-                <img 
-                  src={testimonials[currentTestimonial].image} 
-                  alt={testimonials[currentTestimonial].name}
-                  className="w-full h-full object-cover"
-                />
+                <img src={testimonials[currentTestimonial].image} alt={testimonials[currentTestimonial].name} className="w-full h-full object-cover" />
               </div>
               
-              <button 
-                onClick={nextTestimonial}
-                className="p-2 hover:bg-muted rounded-full transition-colors"
-                aria-label="Next testimonial"
-              >
+              <button onClick={nextTestimonial} className="p-2 hover:bg-muted rounded-full transition-colors" aria-label="Next testimonial">
                 <ChevronRight className="w-6 h-6 text-muted-foreground" />
               </button>
             </div>
@@ -286,11 +242,7 @@ const Books = () => {
             </div>
 
             <div className="flex justify-center lg:justify-end">
-              <img
-                src={dionneAbout}
-                alt="Dionne Tweneboah"
-                className="w-full max-w-md object-cover rounded-lg"
-              />
+              <img src={dionneAbout} alt="Dionne Tweneboah" className="w-full max-w-md object-cover rounded-lg" />
             </div>
           </div>
         </div>
@@ -312,7 +264,7 @@ const Books = () => {
                   Become who you were born to be.
                 </p>
                 <svg className="w-48 h-4 mt-2" viewBox="0 0 200 10">
-                  <path d="M0,5 Q50,0 100,5 T200,5" stroke="white" strokeWidth="2" fill="none" opacity="0.6"/>
+                  <path d="M0,5 Q50,0 100,5 T200,5" stroke="white" strokeWidth="2" fill="none" opacity="0.6" />
                 </svg>
               </div>
               
@@ -331,11 +283,7 @@ const Books = () => {
 
             <div className="flex justify-center lg:justify-end">
               <div className="bg-[hsl(0,0%,85%)] p-8 rounded-lg shadow-2xl">
-                <img
-                  src={bookTyranny}
-                  alt="The Tyranny of the Ordinary"
-                  className="w-64 md:w-80 rounded shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-300"
-                />
+                <img src={bookTyranny} alt="The Tyranny of the Ordinary" className="w-64 md:w-80 rounded shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-300" />
               </div>
             </div>
           </div>
@@ -357,12 +305,10 @@ const Books = () => {
             </h3>
             
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
-              {conqueringFeatures.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
+              {conqueringFeatures.map((feature, index) => <div key={index} className="flex items-start gap-3">
                   <span className="font-bold text-foreground">{index + 1}.</span>
                   <p className="text-muted-foreground">{feature}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <p className="text-center mt-12 text-primary font-semibold text-lg">
@@ -387,8 +333,6 @@ const Books = () => {
       <Newsletter />
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Books;
