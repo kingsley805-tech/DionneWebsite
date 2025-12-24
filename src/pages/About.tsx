@@ -35,13 +35,13 @@ const About = () => {
             <img src={aboutHero} alt="Dionne Tweneboah" className="w-full h-full shadow-2xl" />
           </div>
 
-          <div className="max-w-2xl mx-auto space-y-4">
-            <h2 className="font-heading text-2xl md:text-3xl font-semibold text-burgundy my-[50px]">
+          <div className="max-w-2xl mx-auto space-y-4 py-[2px] my-[20px]">
+            <h2 className="font-heading text-2xl md:text-3xl font-semibold text-burgundy my-0 py-[5px]">
               Bestselling author,<br />
               transformational speaker,<br />
               and mindset coach,
             </h2>
-            <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-xl mx-auto">
+            <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-xl mx-auto py-0 my-0">
               I'm passionate about helping women break free from limitations and live with bold purpose. I believe you weren't
               created to blend in or settle for survival mode, you were born to lead, to flourish, and to walk unapologetically in your
               calling.
