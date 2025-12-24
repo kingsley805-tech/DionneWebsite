@@ -37,7 +37,7 @@ const Books = () => {
       <section className="pt-20 md:pt-24 bg-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-6" data-aos="fade-right">
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-primary-foreground">
                 <span className="italic font-normal">The Tyranny of</span>
                 <br />
@@ -67,7 +67,7 @@ const Books = () => {
               </Button>
             </div>
 
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end" data-aos="fade-left" data-aos-delay="200">
               <div className="bg-[hsl(0,0%,90%)] p-8 rounded-lg shadow-2xl">
                 <img src={bookTyranny} alt="The Tyranny of the Ordinary" className="w-64 md:w-80 rounded shadow-xl " />
               </div>
@@ -112,7 +112,7 @@ const Books = () => {
     <div className="bg-[#333333] grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto p-8 md:p-16 relative">
       
       {/* Image Container with Negative Margin to overlap left and bottom */}
-      <div className="relative lg:-ml-28 lg:-mb-28 flex justify-center lg:block">
+      <div className="relative lg:-ml-28 lg:-mb-28 flex justify-center lg:block" data-aos="fade-right">
         <img 
           alt="Dionne Tweneboah" 
           className="w-full max-w-md shadow-2xl" 
@@ -121,35 +121,35 @@ const Books = () => {
       </div>
       
       {/* Content Area */}
-      <div className="space-y-6">
+      <div className="space-y-6" data-aos="fade-left">
         <p className="text-[#FFD700] font-bold uppercase tracking-wider">
           IT'S NOT TOO LATE.
         </p>
         
         <h2 className="font-heading text-3xl md:text-5xl font-bold text-white leading-tight">
-          <span className="text-6xl absolute -ml-8 -mt-2 opacity-80">“</span>
+          <span className="text-6xl absolute -ml-8 -mt-2 opacity-80">"</span>
           A Message from Dionne Tweneboah...
         </h2>
         
         <div className="space-y-6 text-white/90 text-lg leading-relaxed font-light">
-          <p>
+          <p data-aos="fade-up" data-aos-delay="100">
             There was a moment when I looked at my life and asked myself a painful question: Is this all there is?
           </p>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="200">
             From the outside, things looked fine. But on the inside, I knew I was hiding. I was shrinking, settling, surviving - not thriving.
           </p>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="300">
             This book is the answer to that question. It's my love letter to the person who knows they're called to more but feel stuck in cycles of fear, perfectionism, or playing small.
           </p>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="400">
             It's for the ones who secretly wonder if it's too late or if they've missed their moment.
           </p>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="500">
             <strong>It's not too late.</strong> Your purpose didn't expire. The <strong>extraordinary</strong> life you crave is still available, and <strong>I wrote this to help you reclaim it.</strong>
           </p>
         </div>
         
-        <div className="pt-4">
+        <div className="pt-4" data-aos="zoom-in" data-aos-delay="600">
           <button className="bg-[#992430] hover:bg-[#7a1d26] text-white px-8 py-4 uppercase tracking-widest font-bold rounded-full border border-[#FFD700]/30 transition-colors">
             BUY THE TYRANNY OF THE ORDINARY
           </button>
@@ -162,7 +162,7 @@ const Books = () => {
       {/* Who This Book Is For - Tyranny */}
       <section className="py-16 md:py-24 bg-[hsl(0,0%,95%)]">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-aos="fade-up">
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-2">
               Who This Book Is For
             </h2>
@@ -174,18 +174,18 @@ const Books = () => {
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <h3 className="font-heading text-xl md:text-2xl font-semibold mb-8 text-center text-primary">
+            <h3 className="font-heading text-xl md:text-2xl font-semibold mb-8 text-center text-primary" data-aos="fade-up" data-aos-delay="100">
               This book is for the one who:
             </h3>
             
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
-              {tyrannyFeatures.map((feature, index) => <div key={index} className="flex items-start gap-3">
+              {tyrannyFeatures.map((feature, index) => <div key={index} className="flex items-start gap-3" data-aos="fade-up" data-aos-delay={200 + index * 50}>
                   <span className="font-bold text-foreground">{index + 1}.</span>
                   <p className="text-muted-foreground">{feature}</p>
                 </div>)}
             </div>
 
-            <p className="text-center mt-12 text-primary font-semibold text-lg">
+            <p className="text-center mt-12 text-primary font-semibold text-lg" data-aos="fade-up" data-aos-delay="600">
               If you saw yourself in even one of these... this book was written for you.
             </p>
           </div>
@@ -196,7 +196,7 @@ const Books = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-8 mb-8">
+            <div className="flex items-center justify-center gap-8 mb-8" data-aos="zoom-in">
               <button onClick={prevTestimonial} className="p-2 hover:bg-muted rounded-full transition-colors" aria-label="Previous testimonial">
                 <ChevronLeft className="w-6 h-6 text-muted-foreground" />
               </button>
@@ -210,11 +210,11 @@ const Books = () => {
               </button>
             </div>
             
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
               {testimonials[currentTestimonial].quote}
             </p>
             
-            <p className="font-heading text-lg italic text-foreground">
+            <p className="font-heading text-lg italic text-foreground" data-aos="fade-up" data-aos-delay="200">
               ~ {testimonials[currentTestimonial].name} ~
             </p>
           </div>
@@ -225,7 +225,7 @@ const Books = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
-            <div className="space-y-6">
+            <div className="space-y-6" data-aos="fade-right">
               <h2 className="font-heading text-3xl md:text-4xl font-bold">
                 About the Author
               </h2>
@@ -252,7 +252,7 @@ const Books = () => {
               </Button>
             </div>
 
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end" data-aos="fade-left" data-aos-delay="200">
               <img src={dionneAbout} alt="Dionne Tweneboah" className="w-full max-w-md object-cover rounded-lg" />
             </div>
           </div>
@@ -263,7 +263,7 @@ const Books = () => {
       <section className="bg-[hsl(0,0%,30%)] py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div className="space-y-6">
+            <div className="space-y-6" data-aos="fade-right">
               <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide">
                 CONQUERING
               </h2>
@@ -292,7 +292,7 @@ const Books = () => {
               </Button>
             </div>
 
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end" data-aos="fade-left" data-aos-delay="200">
               <div className="bg-[hsl(0,0%,85%)] p-8 rounded-lg shadow-2xl">
                 <img src={bookTyranny} alt="The Tyranny of the Ordinary" className="w-64 md:w-80 rounded shadow-xlotate-0 " />
               </div>
@@ -304,30 +304,30 @@ const Books = () => {
       {/* Who This Book Is For - Conquering */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-aos="fade-up">
             <h2 className="font-heading text-3xl md:text-4xl font-bold">
               Who This Book Is For
             </h2>
           </div>
 
-          <div className="max-w-5xl mx-auto bg-[hsl(0,0%,95%)] rounded-lg p-8 md:p-12">
+          <div className="max-w-5xl mx-auto bg-[hsl(0,0%,95%)] rounded-lg p-8 md:p-12" data-aos="zoom-in">
             <h3 className="font-heading text-xl md:text-2xl font-semibold mb-8 text-center text-primary">
               You'll feel seen in this book if:
             </h3>
             
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
-              {conqueringFeatures.map((feature, index) => <div key={index} className="flex items-start gap-3">
+              {conqueringFeatures.map((feature, index) => <div key={index} className="flex items-start gap-3" data-aos="fade-up" data-aos-delay={index * 50}>
                   <span className="font-bold text-foreground">{index + 1}.</span>
                   <p className="text-muted-foreground">{feature}</p>
                 </div>)}
             </div>
 
-            <p className="text-center mt-12 text-primary font-semibold text-lg">
+            <p className="text-center mt-12 text-primary font-semibold text-lg" data-aos="fade-up" data-aos-delay="400">
               If even one of these resonates - this book is for you.
             </p>
           </div>
           
-          <div className="text-center mt-12 space-y-6">
+          <div className="text-center mt-12 space-y-6" data-aos="fade-up" data-aos-delay="500">
             <p className="text-lg md:text-xl text-foreground max-w-3xl mx-auto">
               You don't have to fight another battle alone - or unequipped.<br />
               Conquering is your guide back to your boldest, most free, and most faith-filled self.

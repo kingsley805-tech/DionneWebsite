@@ -38,10 +38,10 @@ const Resources = () => {
       {/* Hero */}
       <section className="pt-28 md:pt-36 section-padding bg-muted">
         <div className="container mx-auto text-center max-w-3xl">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6" data-aos="fade-down">
             Resources
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground" data-aos="fade-up" data-aos-delay="100">
             Free tools, guides, and content designed to help you rise with purpose,
             clarity, and confidence. Everything you need to start your transformation journey.
           </p>
@@ -58,6 +58,8 @@ const Resources = () => {
                 <div
                   key={index}
                   className="p-8 border border-border rounded-lg hover:border-primary hover:shadow-lg transition-all duration-300 group"
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
@@ -91,13 +93,13 @@ const Resources = () => {
       {/* CTA */}
       <section className="section-padding bg-primary text-primary-foreground text-center">
         <div className="container mx-auto max-w-2xl">
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">
             Want More Exclusive Content?
           </h2>
-          <p className="text-lg opacity-90 mb-8">
+          <p className="text-lg opacity-90 mb-8" data-aos="fade-up" data-aos-delay="100">
             Join my newsletter for weekly insights, exclusive resources, and first access to new content.
           </p>
-          <Button variant="heroOutline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+          <Button variant="heroOutline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" data-aos="zoom-in" data-aos-delay="200">
             Join the Community
           </Button>
         </div>

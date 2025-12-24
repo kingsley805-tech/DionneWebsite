@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import speakerHero from "@/assets/speaker-hero.jpg";
 import dionneAbout from "@/assets/dionne-portrait.jpg";
 import { CheckCircle, Asterisk } from "lucide-react";
+import theirOwnTerms from '@/assets/their own terms.svg'
 
 const audienceOutcomes = [
   "Renewed clarity on their identity and calling",
@@ -45,28 +46,28 @@ const Speaking = () => {
 
       {/* Hero Section */}
       <section className="pt-20 md:pt-24 relative">
-        <div className="relative h-[70vh] md:h-[80vh] overflow-hidden">
-          <img
-            src={speakerHero}
-            alt="Dionne Speaking"
-            className="w-full h-full object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/60 to-primary/30"></div>
-          <div className="absolute inset-0 flex items-end justify-center text-center text-primary-foreground pb-16 md:pb-24">
-            <div className="max-w-4xl px-4">
-              <p className="text-base md:text-lg mb-4 opacity-90">
-                Book Dionne Tweneboah for Your Next Event
-              </p>
-              <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
-                Empowering Keynotes · Bold Mindset Shifts · Purpose-Fueled Transformation
-              </h1>
-              <Button size="lg" className="rounded-full px-8 bg-[#F3BA00] hover:bg-[#F3BA00]/90 text-black">
-                Book Now
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="relative h-[70vh] md:h-[90vh] lg:h-[95vh] overflow-hidden bg-black">
+    <img
+      src={speakerHero}
+      alt="Dionne Speaking"
+      className="w-full h-full object-contain object-center"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/60 to-primary/30"></div>
+    <div className="absolute inset-0 flex items-end justify-center text-center text-primary-foreground pb-16 md:pb-32 lg:pb-40">
+      <div className="max-w-4xl px-4" data-aos="fade-up" data-aos-delay="200">
+        <p className="text-base md:text-lg mb-4 opacity-90" data-aos="fade-up">
+          Book Dionne Tweneboah for Your Next Event
+        </p>
+        <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-8" data-aos="fade-up" data-aos-delay="300">
+          Empowering Keynotes · Bold Mindset Shifts · Purpose-Fueled Transformation
+        </h1>
+        <Button size="lg" className="rounded-full px-8 bg-[#F3BA00] hover:bg-[#F3BA00]/90 text-black" data-aos="zoom-in" data-aos-delay="400">
+          Book Now
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Intro Section */}
       <section className="py-16 md:py-24 bg-background">
@@ -97,7 +98,7 @@ const Speaking = () => {
               With a powerful mix of personal story, soul-shaking insight, and
               practical tools, Dionne challenges audiences to get unstuck, rise with
               purpose, and redefine success on{" "}
-              <span className="brush-highlight text-black ml-1">their own terms.</span>
+             <img src={theirOwnTerms} alt="their own terms" className="inline-block" />
             </p>
 
             {/* Secondary Paragraph */}

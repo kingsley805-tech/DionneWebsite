@@ -11,7 +11,7 @@ const Blogs = () => {
       {/* Header */}
       <section className="pt-28 md:pt-36 pb-8 section-padding bg-muted">
         <div className="container mx-auto">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold">
+          <h1 className="font-heading text-4xl md:text-5xl font-bold" data-aos="fade-down">
             Featured In
           </h1>
         </div>
@@ -22,7 +22,7 @@ const Blogs = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="space-y-12">
             {/* Blog Post 1 - Rise Up Youth */}
-            <article className="group">
+            <article className="group" data-aos="fade-up" data-aos-delay="100">
               <div className="relative aspect-[21/9] rounded-lg overflow-hidden mb-4">
                 <img src={blogRiseUp} alt="Rise Up Youth Summit" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
@@ -38,7 +38,7 @@ const Blogs = () => {
             </article>
 
             {/* Blog Post 2 - RYSE Up Youth Empowerment */}
-            <article className="group">
+            <article className="group" data-aos="fade-up" data-aos-delay="200">
               <div className="relative aspect-[21/9] rounded-lg overflow-hidden mb-4">
                 <img src={blogRyse} alt="RYSE Up Youth Empowerment Summit" className="w-full h-full object-cover" />
               </div>
@@ -54,7 +54,7 @@ const Blogs = () => {
             </article>
 
             {/* Blog Post 3 - World Mental Health Day */}
-            <article className="group">
+            <article className="group" data-aos="fade-up" data-aos-delay="300">
               <div className="relative aspect-[21/9] rounded-lg overflow-hidden mb-4">
                 <img src={blogMentalHealth} alt="World Mental Health Day 2025" className="w-full h-full object-cover object-top" />
               </div>
@@ -70,7 +70,7 @@ const Blogs = () => {
             </article>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
             <Button variant="outline" size="lg" className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               Check out More Blogs
             </Button>
