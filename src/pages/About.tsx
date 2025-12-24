@@ -78,7 +78,7 @@ const About = () => {
       </section>
 
       {/* Welcome Section */}
-      <section className="py-12 md:py-16 px-4 bg-background">
+      <section className="py-12 md:py-16 px-4 bg-muted">
         <div className="container mx-auto text-center max-w-3xl">
           <p className="text-base md:text-lg leading-relaxed mb-6 italic text-muted-foreground">
             Whether you're rediscovering your voice, launching a new dream,
