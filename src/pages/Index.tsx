@@ -54,17 +54,46 @@ const Index = () => {
   return <div className="min-h-screen bg-background">
       <Navbar />
 
-      {/* Hero Section - Name Banner */}
-      <section className="pt-20 md:pt-24 bg-primary text-primary-foreground relative overflow-hidden">
-        {/* Decorative icons */}
-        <img src={iconScale} alt="" className="absolute left-0 bottom-0 w-28 md:w-40 lg:w-48 opacity-50 pointer-events-none" />
-        <img src={iconGavel} alt="" className="absolute right-20 md:right-32 lg:right-40 top-4 md:top-8 w-16 md:w-24 lg:w-28 opacity-50 pointer-events-none" />
-        <img src={iconMicrophone} alt="" className="absolute right-0 bottom-0 w-24 md:w-32 lg:w-40 opacity-50 pointer-events-none" />
+      {/* Hero Section */}
+      <section className="pt-20 md:pt-24 relative overflow-hidden bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="flex-col min-h-[50vh] relative pb-32 md:pb-40 mx-0 flex items-center justify-end">
+            {/* Left text */}
+            <div className="absolute left-4 md:left-8 lg:left-16 top-1/2 -translate-y-1/2 max-w-xs z-10">
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                Blending law, leadership, and<br />
+                mentorship to shape a just and<br />
+                purpose-driven world.
+              </p>
+            </div>
 
-        <div className="container mx-auto px-4 py-12 md:py-16 lg:py-20 relative z-10">
-          <div className="text-center">
-            <p className="text-base md:text-lg tracking-wide mb-2 opacity-90 font-heading">Hi, I'm</p>
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold">
+            {/* Center - Hero Image */}
+            <div className="relative z-30">
+              <img alt="Dionne Tweneboah" className="w-72 md:w-96 lg:w-[28rem] object-cover" src="/lovable-uploads/ae4cd500-bdff-4bd7-8a49-231e17955123.png" />
+            </div>
+
+            {/* Right buttons */}
+            <div className="absolute right-4 md:right-8 lg:right-16 top-1/2 -translate-y-1/2 flex gap-3 z-10">
+              <Button variant="hero" size="lg" className="rounded-full px-6 md:px-8">
+                Book Me
+              </Button>
+              <Button variant="outline" size="lg" className="rounded-full px-6 md:px-8 border-2 border-foreground">
+                About Me
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Name Banner - overlaps the hero image */}
+        <div className="bg-primary text-primary-foreground py-12 relative overflow-hidden -mt-32 md:-mt-40 my-px md:py-0">
+          {/* Decorative icons on burgundy banner */}
+          <img src={iconScale} alt="" className="absolute -left-4 md:left-0 bottom-0 w-32 md:w-44 lg:w-52 opacity-40 pointer-events-none brightness-0 invert" />
+          <img src={iconGavel} alt="" className="absolute right-16 md:right-32 lg:right-40 top-2 md:top-4 w-14 md:w-20 lg:w-24 opacity-40 pointer-events-none brightness-0 invert" />
+          <img src={iconMicrophone} alt="" className="absolute -right-2 md:right-4 bottom-0 w-20 md:w-28 lg:w-36 opacity-40 pointer-events-none brightness-0 invert" />
+
+          <div className="text-center relative z-10 pt-20 md:pt-24 px-0 my-0 py-0">
+            <p className="text-sm md:text-base tracking-widest mb-2 opacity-90 font-heading">Hi, I'm</p>
+            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-normal italic">
               Dionne<br />Tweneboah
             </h1>
           </div>
