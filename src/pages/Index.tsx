@@ -57,7 +57,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-20 md:pt-24 relative overflow-hidden bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="flex flex-col items-center justify-center min-h-[50vh] relative pb-32 md:pb-40">
+          <div className="flex-col min-h-[50vh] relative pb-32 md:pb-40 mx-0 flex items-center justify-end">
             {/* Left text */}
             <div className="absolute left-4 md:left-8 lg:left-16 top-1/2 -translate-y-1/2 max-w-xs z-10">
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
@@ -91,7 +91,7 @@ const Index = () => {
           <img src={iconGavel} alt="" className="absolute right-16 md:right-32 lg:right-40 top-2 md:top-4 w-14 md:w-20 lg:w-24 opacity-40 pointer-events-none brightness-0 invert" />
           <img src={iconMicrophone} alt="" className="absolute -right-2 md:right-4 bottom-0 w-20 md:w-28 lg:w-36 opacity-40 pointer-events-none brightness-0 invert" />
 
-          <div className="text-center relative z-10 pt-20 md:pt-24 py-0">
+          <div className="text-center relative z-10 pt-20 md:pt-24 py-0 my-[50px] px-0">
             <p className="text-sm md:text-base tracking-widest mb-2 opacity-90 font-heading">Hi, I'm</p>
             <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-normal italic">
               Dionne<br />Tweneboah
@@ -101,7 +101,7 @@ const Index = () => {
       </section>
 
       {/* White gap between Hero and Mission */}
-      <div className="h-16 md:h-24 bg-background"></div>
+      <div className="h-16 md:h-24 bg-background my-0 mx-0 px-0 py-0"></div>
 
       {/* Mission Section */}
       <section className="bg-primary text-primary-foreground section-padding">
