@@ -58,7 +58,7 @@ const About = () => {
               <img alt="Dionne's Journey" className="w-full max-w-sm rounded-lg shadow-xl" src="/lovable-uploads/9ec8a693-f6be-4b8e-8cc2-8c1ec68f1208.jpg" />
             </div>
 
-            <div className="space-y-6 text-cream">
+            <div className="space-y-4 text-cream">
               <p className="text-lg md:text-xl leading-relaxed italic">
                 <span className="font-semibold not-italic">My journey hasn't always been glamorous.</span> Like many women, I've
                 battled fear, self-doubt, and the pressure to shrink.
