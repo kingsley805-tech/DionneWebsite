@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import bookTyranny from "@/assets/book-tyranny.jpg";
+import bookTyranny from "@/assets/book-tyranny.png";
 import dionneHero from "@/assets/dionne-hero.jpg";
 import { Check } from "lucide-react";
 
