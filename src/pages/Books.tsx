@@ -166,10 +166,10 @@ const Books = () => {
             <h2 className="font-heading text-3xl md:text-4xl font-bold mb-2">
               Who This Book Is For
             </h2>
-            <p className="font-heading text-2xl md:text-3xl italic text-muted-foreground" style={{
-            fontFamily: 'cursive'
+            <p className="font-signature text-2xl md:text-3xl italic text-muted-foreground" style={{
+            fontFamily: 'Brittany Signature'
           }}>
-              (If You're Wondering...)
+              If You're Wondering...
             </p>
           </div>
 

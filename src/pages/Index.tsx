@@ -107,7 +107,7 @@ const Index = () => {
               <p className="text-muted-foreground text-sm text-center sm:text-left leading-relaxed px-2" data-aos="fade-right">
                 Blending law, leadership, and mentorship to shape a just and purpose-driven world.
               </p>
-              <div className="relative z-30" data-aos="zoom-in" data-aos-delay="200">
+              <div className="relative z-30 -top-4" data-aos="zoom-in" data-aos-delay="200">
                 <img
                   alt="Dionne Tweneboah"
                   className="w-40 sm:w-48 object-cover"
