@@ -131,7 +131,7 @@ const Index = () => {
 
             {/* Right Image */}
             <div className="flex justify-center lg:justify-end">
-              <img src={missionImage} alt="Dionne Tweneboah" className="w-full max-w-md object-cover rounded-sm" />
+              <img alt="Dionne Tweneboah" className="w-full max-w-md object-cover rounded-sm" src="/lovable-uploads/421a7918-9d65-4b35-a778-03b3bfa8c4bf.jpg" />
             </div>
           </div>
 
