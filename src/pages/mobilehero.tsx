@@ -65,7 +65,7 @@ const Index = () => {
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
-                <Button asChild variant="hero-outline" size="lg" className="w-full">
+                <Button asChild variant="heroOutline" size="lg" className="w-full">
                   <Link to="/about">About Me</Link>
                 </Button>
               </div>
@@ -100,7 +100,7 @@ const Index = () => {
               <Button asChild variant="hero" size="lg">
                 <Link to="/speaking">Book Me</Link>
               </Button>
-              <Button asChild variant="hero-outline" size="lg">
+              <Button asChild variant="heroOutline" size="lg">
                 <Link to="/about">About Me</Link>
               </Button>
             </div>

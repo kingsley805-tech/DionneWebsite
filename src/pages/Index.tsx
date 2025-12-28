@@ -99,12 +99,12 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
-<MobileHero />
+
       
       <section className="pt-16 md:pt-20 relative overflow-hidden bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
          
-
+<MobileHero />
           {/* Desktop Layout */}
           <div className="hidden md:flex flex-col min-h-[40vh] relative pb-24 md:pb-32 items-center justify-end">
             {/* Left text */}
@@ -134,7 +134,7 @@ const Index = () => {
         </div>
 
         {/* Name Banner - overlaps the hero image */}
-        <div className="bg-primary text-primary-foreground py-8 relative overflow-hidden -mt-28 sm:-mt-32 md:-mt-32 md:py-0 ">
+        <div className="bg-primary hidden md:block text-primary-foreground py-8 relative overflow-hidden -mt-28 sm:-mt-32 md:-mt-32 md:py-0 ">
           <div className="text-center relative z-40 pt-4 md:pt-6 pb-4 px-0" data-aos="fade-up" data-aos-delay="400">
             <p className="text-sm md:text-lg tracking-wide mb-2 opacity-90">Hi, I'm</p>
             <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold">
@@ -150,7 +150,7 @@ const Index = () => {
       </section>
 
       {/* White gap between Hero and Mission */}
-      <div className="h-16 md:h-10 my-0 mx-0 px-0 py-0 bg-muted"></div>
+      <div className="h-16 md:h-10 my-0 mx-0 px-0 py-0 hidden md:block bg-muted"></div>
 
       {/* Mission Section */}
       <section className="text-primary-foreground section-padding bg-[#992430]">
