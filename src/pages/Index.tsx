@@ -14,6 +14,7 @@ import roleHumanitarianImage from "@/assets/role-humanitarian.jpg";
 import roleLeaderImage from "@/assets/role-leader.jpg";
 import roleCreatorImage from "@/assets/role-creator.jpg";
 import missionImageImage from "@/assets/mission-image.jpg";
+import MobileHero from '../pages/mobilehero';
 import worldMap from "@/assets/world-map.png";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -98,39 +99,11 @@ const Index = () => {
       <Navbar />
 
       {/* Hero Section */}
+<MobileHero />
+      
       <section className="pt-16 md:pt-20 relative overflow-hidden bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          {/* Mobile / Small screens layout */}
-          <div className="flex md:hidden items-end justify-between gap-4 sm:gap-8 pb-24 max-w-3xl mx-auto">
-            {/* Left: text + image, with image sitting on the red section */}
-            <div className="flex flex-col items-center sm:items-start gap-4">
-              <p className="text-muted-foreground text-sm text-center sm:text-left leading-relaxed px-2" data-aos="fade-right">
-                Blending law, leadership, and mentorship to shape a just and purpose-driven world.
-              </p>
-              <div className="relative z-30 -top-4" data-aos="zoom-in" data-aos-delay="200">
-                <img
-                  alt="Dionne Tweneboah"
-                  className="w-40 sm:w-48 object-cover"
-                  src={dionneHeroImage}
-                />
-              </div>
-            </div>
-
-            {/* Right: buttons */}
-            <div className="flex flex-col gap-3 z-10 mb-6 sm:mb-10" data-aos="fade-left" data-aos-delay="300">
-              <Button asChild variant="hero" size="default" className="rounded-full px-5 whitespace-nowrap">
-                <Link to="/speaking">Book Me</Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="default"
-                className="rounded-full px-5 border-2 border-foreground whitespace-nowrap"
-              >
-                <Link to="/about">About Me</Link>
-              </Button>
-            </div>
-          </div>
+         
 
           {/* Desktop Layout */}
           <div className="hidden md:flex flex-col min-h-[40vh] relative pb-24 md:pb-32 items-center justify-end">
@@ -145,7 +118,7 @@ const Index = () => {
 
             {/* Center - Hero Image */}
           <div className="relative z-20" data-aos="zoom-in" data-aos-delay="200"> {/* Lower than z-40, so text covers it */}
-          <img alt="Dionne Tweneboah" src={dionneHeroImage} className="w-84 md:w-80 lg:w-96 object-cover" />
+          <img alt="Dionne Tweneboah" src={dionneHeroImage} className=" md:w-[30rem] lg:w-[39rem] object-cover" />
           </div>
 
             {/* Right buttons */}

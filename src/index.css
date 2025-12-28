@@ -138,6 +138,17 @@
   .hover-lift { @apply transition-transform duration-300 hover:-translate-y-1; }
   .animate-fade-up { animation: fadeUp 0.6s ease-out forwards; }
   .animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+  
+  /* Glass card effect */
+  .glass-card {
+    @apply bg-background/80 backdrop-blur-sm border border-border/50;
+  }
+  
+  /* Stagger delays for animations */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
 
   .underline-animation { @apply relative; }
   .underline-animation::after {
@@ -168,4 +179,10 @@
   50% { transform: translateY(-10px); }
 }
 
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
 .animate-float { animation: float 3s ease-in-out infinite; }
+.animate-pulse-soft { animation: pulseSoft 2s ease-in-out infinite; }
