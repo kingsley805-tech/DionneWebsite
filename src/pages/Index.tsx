@@ -95,7 +95,7 @@ const MissionSection = () => {
 
 
 const Index = () => {
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen w-full bg-background">
       <Navbar />
 
       {/* Hero Section */}
@@ -104,7 +104,7 @@ const Index = () => {
       <section className="pt-16 md:pt-20 relative overflow-hidden bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
          
-<MobileHero />
+<div className="flex md:hidden"><MobileHero /></div>
           {/* Desktop Layout */}
           <div className="hidden md:flex flex-col min-h-[40vh] relative pb-24 md:pb-32 items-center justify-end">
             {/* Left text */}

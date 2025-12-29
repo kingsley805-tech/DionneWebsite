@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Navbar from "@/components/Navbar";
 
 // Placeholder image - replace with actual image
 
@@ -8,15 +9,16 @@ import dionneHeroImage from "@/assets/dionne-hero.png";
 
 const Index = () => {
   return (
-    <main className="min-h-screen md:hidden bg-background">
-      <section className="relative min-h-screen hero-section overflow-hidden">
+    <main className="min-h-screen bg-background overflow-x-hidden w-full max-w-full">
+      <Navbar />
+      <section className="relative min-h-screen hero-section overflow-hidden w-full max-w-full">
         {/* Decorative elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none w-full">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/3 rounded-full blur-3xl" />
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative w-full max-w-full">
           {/* Mobile / Small screens layout */}
           <div className="flex md:hidden flex-col min-h-screen pt-20 pb-8">
             {/* Top section with subtle label */}
@@ -75,36 +77,8 @@ const Index = () => {
             <div className="h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-primary to-transparent rounded-full opacity-0 animate-fade-in stagger-4" />
           </div>
 
-          {/* Desktop Layout */}
-          <div className="hidden md:flex flex-col min-h-screen relative pb-24 md:pb-32 items-center justify-center">
-            {/* Left text */}
-            <div className="absolute left-4 md:left-8 lg:left-16 top-1/2 -translate-y-1/2 max-w-xs z-10 opacity-0 animate-slide-up">
-              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-                Blending law, leadership, and<br />
-                mentorship to shape a just and<br />
-                purpose-driven world.
-              </p>
-            </div>
+         
 
-            {/* Center - Hero Image */}
-            <div className="relative z-20 opacity-0 animate-slide-up stagger-2">
-              <img 
-                alt="Dionne Tweneboah" 
-                src={dionneHeroImage} 
-                className="md:w-[30rem] lg:w-[39rem] object-cover shadow-elegant rounded-2xl" 
-              />
-            </div>
-
-            {/* Right buttons */}
-            <div className="absolute right-4 md:right-8 lg:right-16 top-1/2 -translate-y-1/2 flex gap-3 z-10 opacity-0 animate-slide-up stagger-3">
-              <Button asChild variant="hero" size="lg">
-                <Link to="/speaking">Book Me</Link>
-              </Button>
-              <Button asChild variant="heroOutline" size="lg">
-                <Link to="/about">About Me</Link>
-              </Button>
-            </div>
-          </div>
         </div>
       </section>
     </main>
