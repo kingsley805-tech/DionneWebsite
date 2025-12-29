@@ -22,12 +22,12 @@ const Loader = () => {
   if (isComplete) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-gradient-to-br from-[#000000] via-[#1a1a1a] to-[#000000] flex items-center justify-center overflow-hidden">
+    <div className="fixed inset-0 z-[9999] bg-gradient-to-br from-[#000000] via-[#0a0a0a] to-[#000000] flex items-center justify-center overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         {/* Gradient orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#9B2430]/20 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#FFDC00]/10 rounded-full blur-3xl animate-pulse-slower" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#7b1e23]/10 rounded-full blur-3xl animate-pulse-slower" />
         
         {/* Floating particles */}
         {[...Array(30)].map((_, i) => (
@@ -39,7 +39,7 @@ const Loader = () => {
               height: Math.random() * 6 + 2 + 'px',
               left: Math.random() * 100 + '%',
               top: Math.random() * 100 + '%',
-              background: Math.random() > 0.5 ? '#9B2430' : '#FFDC00',
+              background: Math.random() > 0.5 ? '#9B2430' : '#7b1e23',
               opacity: Math.random() * 0.4 + 0.2,
               animation: `float ${Math.random() * 15 + 10}s ease-in-out infinite`,
               animationDelay: `${Math.random() * 5}s`,
@@ -53,12 +53,12 @@ const Loader = () => {
         <div className="mb-12 flex justify-center">
           <div className="relative">
             {/* Rotating ring */}
-            <div className="absolute inset-0 w-40 h-40 border-4 border-transparent border-t-[#9B2430] border-r-[#FFDC00] rounded-full animate-spin" />
-            <div className="absolute inset-2 w-36 h-36 border-4 border-transparent border-b-[#FFDC00] border-l-[#9B2430] rounded-full animate-spin-reverse" />
+            <div className="absolute inset-0 w-40 h-40 border-4 border-transparent border-t-[#9B2430] border-r-[#7b1e23] rounded-full animate-spin" />
+            <div className="absolute inset-2 w-36 h-36 border-4 border-transparent border-b-[#7b1e23] border-l-[#9B2430] rounded-full animate-spin-reverse" />
             
             {/* Center icon */}
             <div className="relative w-40 h-40 flex items-center justify-center">
-              <div className="absolute inset-8 bg-gradient-to-br from-[#9B2430] to-[#FFDC00] rounded-full animate-pulse-glow" />
+              <div className="absolute inset-8 bg-gradient-to-br from-[#9B2430] to-[#7b1e23] rounded-full animate-pulse-glow" />
               <svg
                 className="relative w-16 h-16 text-white animate-float-gentle"
                 fill="currentColor"
@@ -73,17 +73,17 @@ const Loader = () => {
         {/* Main Text */}
         <div className="space-y-6 mb-12">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            <span className="inline-block animate-fade-slide-up text-[#FFDC00] drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+            <span className="inline-block animate-fade-slide-up text-[#9B2430] drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
               Dionne
             </span>
             <br />
-            <span className="inline-block animate-fade-slide-up-delay text-[#FFDC00] drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+            <span className="inline-block animate-fade-slide-up-delay text-[#9B2430] drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
               Tweneboah
             </span>
           </h1>
           
           <div className="space-y-3 animate-fade-in-slow">
-            <p className="text-sm md:text-base text-[#9B2430] font-semibold uppercase tracking-[0.2em]">
+            <p className="text-sm md:text-base text-[#7b1e23] font-semibold uppercase tracking-[0.2em]">
               Purpose:
             </p>
             <p className="text-lg md:text-xl text-white font-light max-w-xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
@@ -97,10 +97,10 @@ const Loader = () => {
           <div className="relative w-full max-w-md mx-auto h-2 bg-white/10 rounded-full overflow-hidden backdrop-blur-sm">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer-bar" />
             <div
-              className="relative h-full bg-gradient-to-r from-[#9B2430] via-[#FFDC00] to-[#9B2430] transition-all duration-300 ease-out rounded-full shadow-lg"
+              className="relative h-full bg-gradient-to-r from-[#9B2430] via-[#7b1e23] to-[#9B2430] transition-all duration-300 ease-out rounded-full shadow-lg"
               style={{ 
                 width: `${progress}%`,
-                boxShadow: '0 0 20px rgba(155, 36, 48, 0.6), 0 0 40px rgba(255, 220, 0, 0.3)'
+                boxShadow: '0 0 20px rgba(155, 36, 48, 0.6), 0 0 40px rgba(123, 30, 35, 0.3)'
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-slide-shimmer" />
@@ -114,13 +114,13 @@ const Loader = () => {
                   key={i}
                   className="w-2 h-2 rounded-full animate-bounce"
                   style={{ 
-                    backgroundColor: i % 2 === 0 ? '#FFDC00' : '#9B2430',
+                    backgroundColor: i % 2 === 0 ? '#9B2430' : '#7b1e23',
                     animationDelay: `${i * 0.15}s` 
                   }}
                 />
               ))}
             </div>
-            <p className="text-[#FFDC00] text-sm font-medium tracking-widest">
+            <p className="text-[#9B2430] text-sm font-medium tracking-widest">
               {progress}%
             </p>
           </div>
@@ -201,7 +201,7 @@ const Loader = () => {
           50% {
             opacity: 1;
             transform: scale(1.1);
-            box-shadow: 0 0 50px rgba(255, 220, 0, 0.9);
+            box-shadow: 0 0 50px rgba(123, 30, 35, 0.9);
           }
         }
 
@@ -321,4 +321,3 @@ const Loader = () => {
 };
 
 export default Loader;
-
